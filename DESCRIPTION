@@ -1,0 +1,18 @@
+Package: ddhelper
+Type: Package
+Title: Helper functions used by Daniel Duplisea
+Version: 0.1.0
+Author: Daniel E. Duplisea and scrounged off internet, credit given
+Maintainer: Daniel Duplisea <daniel.duplisea@dfo-mpo.gc.ca>
+Description: If it is a function meant to immitate a function in other software then I tend to keep the original 
+        names. When it is a function I developed but I do not know if it is used elsewhere I tend to tack on the 
+        suffix ".f". If I borrowed it from elsewhere I keep the original name.
+License: GPL
+Encoding: UTF-8
+LazyData: true
+Depends:
+    mgcv,
+    scales,
+    PBSmapping
+Suggests:
+RoxygenNote: 6.1.1
