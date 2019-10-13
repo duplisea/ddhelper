@@ -8,7 +8,7 @@ bubs(x, y, z, xlim = c(0, 55), ylim = c(1969, 2016),
   xlab = "Length (cm)", ylab = "Year")
 }
 \arguments{
-\item{x, y, z}{the independent, depedent and residual variables}
+\item{x, y, z}{the independent, dependent and residual variables}
 }
 \description{
 Make a bubble plot to look at residuals

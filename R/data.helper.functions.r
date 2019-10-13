@@ -72,14 +72,13 @@ pop <- function(vec){
 
 #' Convert geoegraphic coordinates in degrees minutes seconds to decimal degrees
 #'
-#' @param degminsec all in one number without commas or decimals
-#' @description
+#' @param degminsec all in one number without commas or decimals, e.g. 44 38' 52", input as 443852
+#' @description a function to convert degrees, minutes, seconds coordinates into decimal degrees.
 #' @return
 #' @author Daniel Duplisea
 #' @export
 decdeg.f= function(degminsec){
-  # convert geographic coordinates in degree minutes seconds into decimal decgrees
-  # in one number e.g. 44 38' 52", input as 443852
+  if(degminsec<0) stop("you cannot use negative coordinates. Maybe you actually want -decdeg.f(coords) instead of decdeg.f(-coords)")
   deg= floor(degminsec/10000)
   min= floor((degminsec - deg*10000)/100)/60
   sec= (degminsec-100*floor(degminsec/100))/3600

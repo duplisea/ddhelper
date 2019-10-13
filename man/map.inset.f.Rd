@@ -20,6 +20,13 @@ map.inset.f(longs = c(-71, -50), lats = c(43, 52.25),
 A simple stripped down map without annotation that can be used as an inset to the larger scale map
 }
 \examples{
+   #old.par= par()
+   map.f(longs=c(-74,-50),lats=c(43,52.25),isob=c(200,400))
+ 	par(fig = c(.1,0.4,.6,.9), new = T) #position of the inset box on the current map
+ 	map.inset.f(longs=c(-130,-40),lats=c(10,65)) #coordinates of land area covered by inset
+ 	rect(-70,43,-50,52.25,border="blue",lwd=1) #smaller area highlighted in the inset
+ 	box(lwd=2,col="black")
+ 	par(old.par)
 
 }
 \keyword{function}

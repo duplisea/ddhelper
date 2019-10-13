@@ -261,6 +261,13 @@ map.f= function(longs=c(-74,-50),lats=c(43,52.25),land.colour="sienna3",sea.colo
 #' @keywords helper function
 #' @export
 #' @examples
+#'    #old.par= par()
+#'    map.f(longs=c(-74,-50),lats=c(43,52.25),isob=c(200,400))
+#'  	par(fig = c(.1,0.4,.6,.9), new = T) #position of the inset box on the current map
+#'  	map.inset.f(longs=c(-130,-40),lats=c(10,65)) #coordinates of land area covered by inset
+#'  	rect(-70,43,-50,52.25,border="blue",lwd=1) #smaller area highlighted in the inset
+#'  	box(lwd=2,col="black")
+#'  	par(old.par)
 #'
 map.inset.f= function(longs=c(-71,-50),lats=c(43,52.25),land.colour="sienna3",sea.colour="lightblue"){
   data(worldLLhigh)
@@ -271,12 +278,7 @@ map.inset.f= function(longs=c(-71,-50),lats=c(43,52.25),land.colour="sienna3",se
   plotMap(map.data,xlim=xlim,ylim=ylim,lty=1,lwd=.05 ,col="tan",
           bg=rgb(224,253,254,maxColorValue=255),las=1,xaxt="n", yaxt="n",
           xlab="",ylab="")
-  #xint= seq(longs[1],longs[2],length=5)
-  #yint= seq(lats[1],lats[2],length=6)
-  #mtext("Longitude west",side=1,line=3)
-  #mtext("Latitude north",side=2,line=3)
-  #axis(1, at=xint, labels=xint*-1, lty=1,lwd=1,lwd.ticks= 1, cex.axis=.7)
-  #axis(2, at=yint, labels=yint*1, lty=1,lwd=1,lwd.ticks=1,las=1, cex.axis=.7)
+  box()
 }
 
 
@@ -341,7 +343,7 @@ joinBathy <- function(CP, isobA = 100, isobB = 300, col = "grey") {
 
 #' Make a bubble plot to look at residuals
 #'
-#' @param x,y,z the independent, depedent and residual variables
+#' @param x,y,z the independent, dependent and residual variables
 #' @description
 #' @references
 #' @keywords
@@ -360,7 +362,7 @@ bubs= function(x,y,z, xlim=c(0,55),ylim=c(1969,2016),xlab="Length (cm)", ylab="Y
 
 #' Make a bubble plot to look at residuals
 #'
-#' @param x,y,z the independent, depedent and residual variables
+#' @param x,y,z the independent, dependent and residual variables
 #' @description
 #' @references
 #' @keywords

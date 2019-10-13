@@ -7,10 +7,10 @@
 decdeg.f(degminsec)
 }
 \arguments{
-\item{degminsec}{all in one number without commas or decimals}
+\item{degminsec}{all in one number without commas or decimals, e.g. 44 38' 52", input as 443852}
 }
 \description{
-Convert geoegraphic coordinates in degrees minutes seconds to decimal degrees
+a function to convert degrees, minutes, seconds coordinates into decimal degrees.
 }
 \author{
 Daniel Duplisea
